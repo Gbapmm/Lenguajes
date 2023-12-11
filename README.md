@@ -1,1 +1,1 @@
-# Lenguajes-
+# Archivo descriptor lenguajes.
