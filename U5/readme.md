@@ -1,2 +1,2 @@
 #Ejercicios XPath
-mesi
+XPath con escenario de equipamento informático (básico)
