@@ -1,4 +1,4 @@
-<- No terminado->
+<!-- No terminado -->
 
 <?xml version="1.0" encoding="UTF-8"?>
 <!ELEMENT factura(emision, vendendor, cliente, articulo, descuento)>
