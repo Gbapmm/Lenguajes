@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE equipos_de_baloncesto SYSTEM "409_Baloncesto.dtd">
+<equipos_de_baloncesto>
+    <equipo>
+        <nombre>Dallas Mavericks</nombre>
+        <ciudad>Dallas </ciudad>
+        <entrenador>Jason Kidd</entrenador>
+        <jugadores>
+            <jugador posicion = "Base">
+                <nombre>Luka Donzic</nombre>
+                <nacionalidad>Esloveno</nacionalidad>
+            </jugador>
+            <jugador posicion = "Base">
+                <nombre>Kyrie Irving</nombre>
+                <nacionalidad>Australiano</nacionalidad>
+            </jugador>
+        </jugadores>
+    </equipo>
+    
+    <equipo>
+        <nombre>Los Angeles Lakers</nombre>
+        <ciudad>Los Angeles</ciudad>
+        <entrenador>Darvin Ham</entrenador>
+        <jugadores>
+            <jugador posicion = "Alero">
+                <nombre>LeBron James</nombre>
+                <nacionalidad>Estadounidense</nacionalidad>
+            </jugador>
+            <jugador posicion = "Pivot">
+                <nombre>Anthony Davis</nombre>
+                <nacionalidad>Estadounidense</nacionalidad>
+            </jugador>
+        </jugadores>
+    </equipo>
+</equipos_de_baloncesto>
