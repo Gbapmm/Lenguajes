@@ -1,0 +1,29 @@
+<- No terminado->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT factura(emision, vendendor, cliente, articulo, descuento)>
+<!ATTLIST factura id ID #REQUIRED>
+<!ELEMENT emision (#PCDATA) #REQUIRED>
+<!ELEMENT vendendor (nombre) #REQUIRED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT cliente (nombre, direccion, telefono) #REQUIRED>
+<!ATTLIST cliente id ID #REQUIRED>
+<!ELEMENT nombre (#PCDATA)>
+
+<!ELEMENT direccion (via, cp, localidad, provincia)>
+<!ELEMENT via (#PCDATA)>
+<!ELEMENT cp (#PCDATA)>
+<!ELEMENT localidad (#PCDATA)>
+<!ELEMENT provincia (#PCDATA)>
+
+<!ELEMENT telefono>
+
+<!ELEMENT articulo(denominacion, precio, cantidad)>
+<!ATTLIST articulo id ID #REQUIRED>
+<!ATTLIST articulo iva #REQUIRED>
+
+<!ELEMENT denominacion (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>
+<!ELEMENT cantidad (#PCDATA)>
+
+<!ELEMENT descuento (#PCDATA)>
