@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrícula ASIR</title>
+</head>
+<body>
+    <h1>Matricula ASIR</h1>
+
+    <form method="POST" action="registro.php">
+        <label for="Nombre">Nombre:</label>
+        <input type="text" id="Nombre" name="Nombre">
+        <br>
+        <br>
+        <label for="Apellidos">Apellidos:</label>
+        <input type="text" id="Apellidos" name="Apellidos">
+
+      <br>
+
+        <fieldset>
+          <legend>Género</legend>
+            <input type="radio" id="Masculino" name="Genero" value="Masculino">
+            <label for="Masculino">Masculino</label>
+            <input type="radio" id="Femenino" name="Genero" value="Femenino">
+            <label for="Femenino">Femenino</label>
+            <input type="radio" id="No Binario" name="Genero" value="No Binario">
+            <label for="No Binario">No Binario</label>
+        </fieldset>
+    
+      <br>
+   
+        <fieldset>
+            <legend>Fecha de Nacimiento</legend>
+            <label for="Dia">Dia</label>
+            <select id="Dia" name="Dia">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <label for="Mes">Mes</label>
+            <select id="Mes" name="Mes">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <label for="Año">Año</label>
+            <select id="Año" name="Año">
+                <option value="1">1999</option>
+                <option value="2">2000</option>
+                <option value="3">2003</option>
+                <option value="4">2004</option>
+                <option value="5">2005</option>
+                <option value="6">2006</option>
+                <option value="7">2007</option>
+                <option value="8">2008</option>
+                <option value="9">2009</option>
+                <option value="10">2010</option>
+            </select>
+        </fieldset>
+
+    <br>
+
+        <fieldset>
+            <legend>Escoge los modulos en los que te matriculas</legend>
+            <input type="checkbox" id="Fundamentos" name="Fundamentos" value="Fundamentos">
+            <label for="Fundamentos">Fundamentos de Hardware</label><br>
+            <input type="checkbox" id="Servicios" name="Servicios" value="Servicios">
+            <label for="Servicios">Servicios de red e Internet</label><br>
+            <input type="checkbox" id="Gestión" name="Gestión" value="Gestión">
+            <label for="Gestión">Gestión de bases de datos</label><br>
+            <input type="checkbox" id="Administración" name="Administración" value="Administración">
+            <label for="Administración">Administración de sistemas operativos</label><br>
+            <input type="checkbox" id="Implantación" name="Implantación" value="Implantación">
+            <label for="Implantación">Implantación de sistemas operativos</label><br>
+            <input type="checkbox" id="Implantación2" name="Implantación2" value="Implantación2">
+            <label for="Implantación2">Implantación de aplicaciones web</label><br>
+            <input type="checkbox" id="Planificación" name="Planificación" value="Planificación">
+            <label for="Planificación"></label>Planificación y administración de redes<br>
+            <input type="checkbox" id="Administración" name="Administración" value="Administración">
+            <label for="Administración"></label>Administración de sistemas gestores de bases de datos<br>
+            <input type="checkbox" id="Lenguajes" name="Lenguajes" value="Lenguajes">
+            <label for="Lenguajes">Lenguajes de marcas y sistemas de gestión de información</label><br>
+            <input type="checkbox" id="Seguridad" name="Seguridad" value="Seguridad">
+            <label for="Seguridad">Seguridad y alta disponibilidad</label><br>
+            <input type="checkbox" id="Formación" name="Formación" value="Formación">
+            <label for="Formación">Formación y orientación laboral</label><br>
+            <input type="checkbox" id="Empresa" name="Empresa" value="Empresa">
+            <label for="Empresa">Empresa e iniciativa emprendedora</label><br>
+            <input type="checkbox" id="Proyecto" name="Proyecto" value="Proyecto">
+            <label for="Proyecto">Proyecto de Administración de Sistemas Informáticos en Red</label><br>
+            <input type="checkbox" id="Formación2" name="Formación2" value="Formación2">
+            <label for="Formación2">Formación en centros de trabajo</label>
+        </fieldset>
+    <br>
+
+        <legend>Estudios previos:</legend>
+        <textarea name="estudios" rows="5" cols="50"></textarea>
+
+    <br>
+
+        <input type="submit">
+        <input type="reset">
+    </form>
+    <br>
+    <p><b>Pulsa el botón de "enviar" para formalizar la matrícula o el boton de "restablecer"
+        para limpiar el formulario.</b></p>
+</body>
+</html>
