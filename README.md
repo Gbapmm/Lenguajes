@@ -1,8 +1,13 @@
 # Repositorio con archivos del modulo de Lenguajes
-1. **UD1**                     2. **UD2**
+1. **UD1**                  
    - HTML
    - XML
    - JSON
+<details>
+
+<summary>1. **UD1**</summary>
+
+</details>
 >
 2. **UD2**
 3. **UD3**
