@@ -1,6 +1,6 @@
 <cartelera 
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-  xsi:noNamespaceSchemaLocation="421.xsd">
+  xsi:noNamespaceSchemaLocation="421_cartelera.xsd">
   <pelicula codigo="film899895" duracion="192" ano="2022">
     <titulo>Avatar: El sentido del agua</titulo>
     <titulo-original>Avatar: The Way of Water</titulo-original>
