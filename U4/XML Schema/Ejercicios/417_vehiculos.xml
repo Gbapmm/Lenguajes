@@ -1,4 +1,7 @@
-<vehiculos>
+<?xml version="1.0" encoding="UTF-8"?>
+<vehiculos
+  xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" 
+  xs:noNamespaceSchemaLocation="417_vehiculos.xsd">
   <vehiculo>
     <nombre>Count Zero</nombre>
     <modelo>Series I, 80"</modelo>
