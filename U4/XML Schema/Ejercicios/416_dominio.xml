@@ -1,1 +1,4 @@
-<dominio>w3c.org</dominio>
+<?xml version="1.0" encoding="UTF-8"?>
+<dominio
+  xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" 
+  xs:noNamespaceSchemaLocation="416_dominio.xsd">w3c.org</dominio>
