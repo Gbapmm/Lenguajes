@@ -1,6 +1,6 @@
 # Archivos Unidad 4
 >
-###**Ejercicios DTD y XSD**
+### **Ejercicios DTD y XSD**
 >
 Grado de Complitud: Pude completar todos los ejercicios. 
 >
