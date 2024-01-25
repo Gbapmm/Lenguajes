@@ -1,0 +1,49 @@
+Escribe as expresións XPath para obter os seguintes conxuntos de nodos.
+
+1. Os discos de tecnoloxía "SCSI".
+
+2. O nome do sistema operativo da máquina con IP "192.168.10.45".
+
+3. Os atributos que figuran nos procesadores da marca "AMD".
+
+4. Os textos (soamente) que figuran na configuración (elemento "config") do equipo de nome "COPERNICO".
+
+5. As máquinas de tipo "Semitorre" con sistema operativo "Windows XP".
+
+6. Os fabricantes das máquinas que teñan 4GB de memoria "DDR2".
+
+7. O sistema operativo das máquinas nas que figure o número de núcleos do procesador.
+
+8. Os nomes das máquinas que empreguen memoria con tecnoloxía "DDR2".
+
+9. As máquinas con procesador da marca "Intel" e gravadora de DVD.
+
+10. A configuración daquelas máquinas nas que figura un gateway.
+
+11. As máquinas con nome comezando por "PC".
+
+12. O nome das máquinas con máis de un disco duro.
+
+13. A suma dos GB de memoria RAM de todas as máquinas.
+
+14. A suma das capacidades dos discos duros de tipo "SCSI".
+
+15. Os nomes das máquinas das que se coñeza a súa cantidade de memoria, pero non a tecno-loxía desta.
+
+16. As máquinas con sistema operativo da familia Windows e gravadora de DVD.
+
+17. As máquinas nas que non figure o sistema operativo.
+
+18. O nome da máquina e do SO daquelas máquinas con máis de un disco duro.
+
+19. A configuración daquelas máquinas nas que figura unha dirección IP pero non o gateway.
+
+20. Os elementos baleiros (non conteñen texto).
+
+21. As direccións IP dentro da rede 192.168.10.0/24.
+
+22. Os nomes das máquinas con procesador multinúcleo e 2GB ou menos de memoria.
+
+23. As máquinas que teñan disco duro (un ou varios) con capacidade total maior de 1000GB
+
+24. As máquinas que teñan disco duro (un ou varios) con capacidade total menor de 80GB.
