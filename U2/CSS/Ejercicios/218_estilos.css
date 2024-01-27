@@ -1,0 +1,42 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .teal {
+    background-color: teal;
+  }
+  
+  .red {
+    background-color: red;
+  }
+  
+  .blue {
+    background-color: blue;
+  }
+  
+  .orange {
+    background-color: orange;
+  }
+  
+  .purple {
+    background-color: purple;
+  }
+  
+  .olive {
+    background-color: olive;
+  }
+  
+  .fuchsia {
+    background-color: fuchsia;
+  }
+  
+  .green {
+    background-color: green;
+  }
+  
