@@ -1,0 +1,28 @@
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      border-bottom: 2px solid #00F;
+    }
+
+    h2 {
+      border: 2px solid #AAA;
+      padding: 10px;
+    }
+
+    ul.datos-libro {
+      border-top: 4px dotted #F00;
+      border-bottom: 4px dotted #F00;
+      padding: 10px;
+    }
+
+    ul.contenido-libro {
+      border: 2px dashed #0F0;
+      padding: 10px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
