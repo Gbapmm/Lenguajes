@@ -78,23 +78,96 @@ order by $a
 return <apelidos>{ $a }</apelidos>
 ```
 >
-9. Por cada libro, listar agrupado en un elemento result su titulo y autores
+9. Por cada libro, listar agrupado en un elemento **result** su titulo y autores
 >
 ```
+for $b in doc("bib.xml")//libro 
+return 
+ <result> 
+{ $b/titulo }
+<autores>
+{ 
+ for $a at $i in $b/autor 
+ return <autor>{string($a)}</autor> 
+}
+</autores>
+</result>
 ```
 >
 10. Por cada libro, obtener su título y el número de autores, agrupados en un elemento libro
 >
 ```
+for $b in doc("bib.xml")//libro 
+return 
+ <libro> 
+{ $b/titulo }
+<numeroAutores> 
+{count($b/autor)}
+</numeroAutores>
+ </libro>
 ```
 >
 11. Generar un documento html con un encabezado que diga “Listado de libros” seguido de una tabla de 3 columnas, en la que se muestre el titulo, editorial y precio de cada libro. La tabla deberá tener bordes y la primera fila tendrá un formato especial con los nombres de las columnas. Las columnas de título y editorial irán alineadas a la izquierda, y el precio a la derecha.
 >
 ```
+<html> 
+ <head> 
+  <title> Listado de libros </title> 
+  </head>
+ <body> 
+  <table border="1">
+   <caption>Listado de libros</caption>
+   <th> Titulo </th>  
+   <th> Editorial </th>  
+   <th> Precio </th>  
+
+{ 
+for $a in doc("bib.xml")/bib/libro 
+return 
+   <tr> 
+    <td align ="left"> <i> { string( $a/titulo ) } </i> </td> 
+	<td align ="left"> { string( $a/editorial ) } </td>
+	<td align ="right"> { string( $a/prezo) } </td>
+   </tr> 
+}
+
+  </table> 
+  </body> 
+</html>
 ```
 >
 12. Generar el siguiente documento html con la información de los libros del autor Stevens. El valor precio total es un campo calculado utilizando una consulta con una cláusula let.
 >
 ```
+<html> 
+ <head> 
+  <title> Libros de Stevens </title> 
+  </head>
+ <body> 
+  <table border="1">
+   <caption>Listado de libros</caption>
+   <th> Titulo </th>  
+   <th> Precio </th>  
+{ 
+for $a in doc("bib.xml")//libro 
+where $a/autor/apelido="Stevens"
+return 
+<tr> 
+<td>{$a/titulo}</td>
+<td>{$a/prezo}</td>
+</tr>
+} 
+
+{
+let $a := doc("bib.xml")/bib/libro 
+where $a/autor/apelido="Stevens"
+return 
+   <tr> 
+    <td> {sum( $a/prezo ) } </td> 
+   </tr> 
+} 
+  </table> 
+  </body> 
+</html>
 ```
 
