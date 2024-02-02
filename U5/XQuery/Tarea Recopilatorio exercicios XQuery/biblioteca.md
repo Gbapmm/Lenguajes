@@ -1,9 +1,15 @@
-Escribe las consultas XQuery que permitan obtener la siguiente información:
-1. Título y editorial de todos los libros.
-* Los datos de cada libro deben estar dentro de un elemento <libro>.
-* El título y la editorial de cada libro deben estar separados por un guión medio (-).
-
-
+### Escribe las consultas XQuery que permitan obtener la siguiente información:
+>
+1. Título y editorial de todos los libros. Los datos de cada libro deben estar dentro de un elemento <libro>. El título y la editorial de cada libro deben estar separados por un guión medio (-).
+>
+```
+for $libro in doc("biblioteca.xml")//libro
+return
+  <libro>
+    {$libro/titulo/text()} - {$libro/editorial/text()}
+  </libro>
+```
+>
 2. El título de todos los libros de menos de 400 páginas.
 * Se debe obtener únicamente los datos, sin etiquetas.
 
