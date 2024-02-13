@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<bib>
+  <libro ano="1994">
+    <titulo>TCP/IP Illustrated</titulo>
+    <autor>
+      <apelido>Stevens</apelido>
+      <nome>W.</nome>
+    </autor>
+    <editorial>Addison-Wesley</editorial>
+    <prezo>65.95</prezo>
+  </libro>
+  <libro ano="1992">
+    <titulo>Advanced Programming for Unix environment</titulo>
+    <autor>
+      <apelido>Stevens</apelido>
+      <nome>W.</nome>
+    </autor>
+    <editorial>Addison-Wesley</editorial>
+    <prezo>65.95</prezo>
+  </libro>
+  <libro ano="2000">
+    <titulo>Data on the Web</titulo>
+    <autor>
+      <apelido>Abiteboul</apelido>
+      <nome>Serge</nome>
+    </autor>
+    <autor>
+      <apelido>Buneman</apelido>
+      <nome>Peter</nome>
+    </autor>
+    <autor>
+      <apelido>Suciu</apelido>
+      <nome>Dan</nome>
+    </autor>
+    <editorial>Morgan Kaufmann editorials</editorial>
+    <prezo>39.95</prezo>
+  </libro>
+  <libro ano="1999">
+    <titulo> Economics of Technology for Digital TV</titulo>
+    <editor>
+      <apelido>Gerbarg</apelido>
+      <nome>Darcy</nome>
+      <afiliacion>CITI</afiliacion>
+    </editor>
+    <editorial>Kluwer Academic editorials</editorial>
+    <prezo>129.95</prezo>
+  </libro>
+</bib>
