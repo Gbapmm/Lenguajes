@@ -1,0 +1,22 @@
+table, th, td {
+  width: auto;
+  border: 1px solid #000;
+  text-align: center;
+  text-size-adjust: auto;
+}
+
+td:nth-child(1) {
+  background-color: black;
+}
+
+td:nth-child(2) {
+  background-color: red;
+}
+
+td:nth-child(3) {
+  background-color: violet;
+}
+
+td.Blanco {
+  color: rgb(255, 255, 255);
+}
