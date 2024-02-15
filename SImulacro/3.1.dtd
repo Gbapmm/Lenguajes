@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!ELEMENT libro (titulo,autor,anio)>
+<!ELEMENT libro (titulo,autor,anio,palabrasclave?)>
 <!ELEMENT titulo (#PCDATA)>
 <!ELEMENT autor (#PCDATA)>
 <!ELEMENT anio (#PCDATA)>
+<!ELEMENT palabrasclave (#PCDATA)>
