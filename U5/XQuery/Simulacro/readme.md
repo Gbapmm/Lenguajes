@@ -2,4 +2,117 @@
 >
 1.El modelo de las impresoras de tipo láser.
 >
-2. 
+```
+  for $impresora in doc("impresoras.xml")/impresoras/impresora
+  where $impresora/@tipo eq "láser"
+  return 
+    <modelo>{$impresora/modelo/text()}</modelo>
+```
+2. La marca y modelo (separados por un espacio en blanco) de las impresoras con más de un tamaño.
+>
+```
+for $impresora in doc("impresoras.xml")/impresoras/impresora
+where count($impresora/tamano) > 1
+return 
+  data($impresora/marca || ""|| $impresora/modelo)
+```
+>
+3. La marca y modelo (separados por un espacio en blanco) de las impresoras con tamaño A3 (pueden tener otros).
+>
+```
+for $impresora in doc("impresoras.xml")/impresoras/impresora
+where $impresora/tamano = "A3"
+return 
+  data($impresora/marca || ""|| $impresora/modelo)
+```
+4. La marca y modelo (separados por un espacio en blanco) de las impresoras con tamaño A3 como único tamaño.
+```
+for $impresora in doc("impresoras.xml")/impresoras/impresora
+where $impresora/tamano = "A3" and count($impresora/tamano) = 1
+return 
+  data($impresora/marca || ""|| $impresora/modelo)
+```
+>
+5. El modelo de las impresoras en red.
+```
+for $impresora in doc("impresoras.xml")/impresoras/impresora
+where $impresora/enred
+return 
+  data($impresora/modelo)
+```
+>
+6. La cantidad de impresoras guardadas en el fichero XML.
+>
+```
+let $cantidad := count(doc("impresoras.xml")/impresoras/impresora)
+return
+    $cantidad
+```
+>
+7. Las impresoras (elementos <impresora>) compradas en 2018 o después. Los resultados se deben ordenar por año de compra (orden ascendente).
+>
+```for $impresora in doc("impresoras.xml")/impresoras/impresora
+where $impresora/@compra >= "2018"
+order by $impresora/@compra
+return
+  $impresora
+```
+>
+8. Las impresoras (elementos <impresora>) con un peso igual o superior a 5 kg.
+>
+```
+for $impresora in doc("impresoras.xml")/impresoras/impresora
+where $impresora/peso >= "5"
+return
+  $impresora
+```
+>
+9. Las impresoras (elementos <impresora>) que tienen cartucho con código C-456P.
+>
+```
+for $impresora in doc("impresoras.xml")/impresoras/impresora
+where $impresora/cartucho = "C-456P"
+return
+  $impresora
+```
+>
+10. La impresora (elemento <impresora>) más pesada.
+>
+```
+let $document := doc("impresoras.xml")
+let $maxWeight := max($document/impresoras/impresora/peso)
+return
+  $document/impresoras/impresora[peso = $maxWeight]
+```
+>
+EXTRA Crea una tabla (o lista) con el número de serie, marca y modelo de las impresoras.
+>
+```
+<html>
+<head>
+  <title>Impresoras Table</title>
+</head>
+<body>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Número de Serie</th>
+        <th>Marca</th>
+        <th>Modelo</th>
+      </tr>
+    </thead>
+    <tbody>
+    {
+      for $impresora in doc("impresoras.xml")/impresoras/impresora
+      return 
+        <tr>
+          <td>{$impresora/@numSerie}</td>
+          <td>{$impresora/marca}</td>
+          <td>{$impresora/modelo}</td>
+        </tr>
+    }
+    </tbody>
+  </table>
+</body>
+</html>
+``` 
