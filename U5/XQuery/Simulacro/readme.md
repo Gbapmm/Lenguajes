@@ -14,7 +14,7 @@
 for $impresora in doc("impresoras.xml")/impresoras/impresora
 where count($impresora/tamano) > 1
 return 
-  data($impresora/marca || ""|| $impresora/modelo)
+  data($impresora/marca,"",$impresora/modelo)
 ```
 >
 3. La marca y modelo (separados por un espacio en blanco) de las impresoras con tamaño A3 (pueden tener otros).
@@ -23,14 +23,14 @@ return
 for $impresora in doc("impresoras.xml")/impresoras/impresora
 where $impresora/tamano = "A3"
 return 
-  data($impresora/marca || ""|| $impresora/modelo)
+  data($impresora/marca,"",$impresora/modelo)
 ```
 4. La marca y modelo (separados por un espacio en blanco) de las impresoras con tamaño A3 como único tamaño.
 ```
 for $impresora in doc("impresoras.xml")/impresoras/impresora
 where $impresora/tamano = "A3" and count($impresora/tamano) = 1
 return 
-  data($impresora/marca || ""|| $impresora/modelo)
+  data($impresora/marca,"",$impresora/modelo)
 ```
 >
 5. El modelo de las impresoras en red.
