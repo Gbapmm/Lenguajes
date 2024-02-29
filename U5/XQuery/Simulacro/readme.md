@@ -80,9 +80,9 @@ return
 >
 ```
 let $document := doc("impresoras.xml")
-let $maxWeight := max($document/impresoras/impresora/peso)
+let $maxpesot := max($document/impresoras/impresora/peso)
 return
-  $document/impresoras/impresora[peso = $maxWeight]
+  $document/impresoras/impresora[peso = $maxpeso]
 ```
 >
 EXTRA Crea una tabla (o lista) con el número de serie, marca y modelo de las impresoras.
