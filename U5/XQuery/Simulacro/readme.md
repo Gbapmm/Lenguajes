@@ -14,7 +14,7 @@
 for $impresora in doc("impresoras.xml")/impresoras/impresora
 where count($impresora/tamano) > 1
 return 
-  data($impresora/marca,"",$impresora/modelo)
+  concat($impresora/marca,"",$impresora/modelo)
 ```
 >
 3. La marca y modelo (separados por un espacio en blanco) de las impresoras con tamaño A3 (pueden tener otros).
@@ -23,14 +23,14 @@ return
 for $impresora in doc("impresoras.xml")/impresoras/impresora
 where $impresora/tamano = "A3"
 return 
-  data($impresora/marca,"",$impresora/modelo)
+  concat($impresora/marca,"",$impresora/modelo)
 ```
 4. La marca y modelo (separados por un espacio en blanco) de las impresoras con tamaño A3 como único tamaño.
 ```
 for $impresora in doc("impresoras.xml")/impresoras/impresora
 where $impresora/tamano = "A3" and count($impresora/tamano) = 1
 return 
-  data($impresora/marca,"",$impresora/modelo)
+  concat($impresora/marca,"",$impresora/modelo)
 ```
 >
 5. El modelo de las impresoras en red.
@@ -38,22 +38,24 @@ return
 for $impresora in doc("impresoras.xml")/impresoras/impresora
 where $impresora/enred
 return 
-  data($impresora/modelo)
+  data($impresora/modelo/text())
 ```
 >
 6. La cantidad de impresoras guardadas en el fichero XML.
 >
 ```
-let $cantidad := count(doc("impresoras.xml")/impresoras/impresora)
-return
-    $cantidad
+count(
+  for $impresora in doc("impresoras.xml")/impresoras/impresora
+  return $impresora
+)
 ```
 >
 7. Las impresoras (elementos <impresora>) compradas en 2018 o después. Los resultados se deben ordenar por año de compra (orden ascendente).
 >
-```for $impresora in doc("impresoras.xml")/impresoras/impresora
+```
+for $impresora in doc("impresoras.xml")/impresoras/impresora
 where $impresora/@compra >= "2018"
-order by $impresora/@compra
+order by $impresora/@compra ascending
 return
   $impresora
 ```
@@ -62,7 +64,7 @@ return
 >
 ```
 for $impresora in doc("impresoras.xml")/impresoras/impresora
-where $impresora/peso >= "5"
+where $impresora/peso >= 5
 return
   $impresora
 ```
@@ -79,10 +81,9 @@ return
 10. La impresora (elemento <impresora>) más pesada.
 >
 ```
-let $document := doc("impresoras.xml")
-let $maxpesot := max($document/impresoras/impresora/peso)
-return
-  $document/impresoras/impresora[peso = $maxpeso]
+for $impresora in doc("impresoras.xml")/impresoras/impresora
+where $impresora/peso = max(doc("impresoras.xml")/impresoras/impresora/peso)
+return $impresora
 ```
 >
 EXTRA Crea una tabla (o lista) con el número de serie, marca y modelo de las impresoras.
@@ -106,7 +107,7 @@ EXTRA Crea una tabla (o lista) con el número de serie, marca y modelo de las im
       for $impresora in doc("impresoras.xml")/impresoras/impresora
       return 
         <tr>
-          <td>{$impresora/@numSerie}</td>
+          <td>{string($impresora/@numSerie)}</td>
           <td>{$impresora/marca}</td>
           <td>{$impresora/modelo}</td>
         </tr>
