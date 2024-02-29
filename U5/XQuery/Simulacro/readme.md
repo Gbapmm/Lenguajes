@@ -4,7 +4,7 @@
 >
 ```
   for $impresora in doc("impresoras.xml")/impresoras/impresora
-  where $impresora/@tipo eq "láser"
+  where $impresora/@tipo = "láser"
   return 
     <modelo>{$impresora/modelo/text()}</modelo>
 ```
