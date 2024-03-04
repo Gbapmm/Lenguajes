@@ -1,6 +1,6 @@
 # Preguntas
 >
-### Vinos
+### Viños
 >
 1. Muestra el nombre y el precio del primer vino.
 >
@@ -14,7 +14,7 @@
 >
 6. Muestra los vinos siguiento la plantilla
 >
-### Ciclos
+### IES
 >
 1. Transforma el xml de la siguientes maneras:
 >
