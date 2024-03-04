@@ -9,7 +9,7 @@
             <th>Nombre:</th>
             <th>Precio:</th>
           </tr>
-          <xsl:for-each select="viños/viño[1]">
+          <xsl:for-each select="viños/viño[prezo > 9]">
             <tr>
               <td><xsl:value-of select="nome"/></td>
               <td><xsl:value-of select="prezo"/>€</td>

@@ -5,21 +5,19 @@
     <html>
       <body>
         <table border="1">
-          <xsl:apply-templates select="viños"/>
+          <tr bgcolor= "#868CD9">
+            <th>Nombre:</th>
+            <th>Precio:</th>
+          </tr>
+          <xsl:for-each select="viños/viño">
+            <tr>
+              <td><xsl:value-of select="nome"/></td>
+              <td><xsl:value-of select="prezo"/>€</td>
+            </tr>
+          </xsl:for-each>
         </table>
       </body>
     </html>
-  </xsl:template>
-  
-  <xsl:template match="viño">
-    <tr>
-      <td>Nombre:</td>
-      <td><xsl:value-of select="nome"/></td>
-    </tr>
-     <tr>
-      <td>Precio:</td>
-      <td><xsl:value-of select="prezo"/>€</td>
-    </tr>
   </xsl:template>
   
 </xsl:stylesheet>
