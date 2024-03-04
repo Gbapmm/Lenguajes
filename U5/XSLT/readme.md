@@ -18,7 +18,7 @@
 >
 1. Transforma el xml de la siguientes maneras:
 >
-- Sin etiquetas
+* Sin etiquetas
 * Con párrafos
 * Con lista
 * Con tabla
