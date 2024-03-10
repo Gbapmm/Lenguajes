@@ -201,20 +201,72 @@
 * Sin etiquetas
 >
 ```
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+<xsl:template match="/">
+  <xsl:for-each select="/ies/ciclos/ciclo">
+    <xsl:value-of select="nombre" />
+    <br/>
+  </xsl:for-each>
+</xsl:template>
+
+</xsl:stylesheet>
 ```
 >
 * Con párrafos
 >
 ```
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+<xsl:template match="/">
+    <xsl:for-each select="/ies/ciclos/ciclo">
+      <p><xsl:value-of select="nombre" /></p>
+    </xsl:for-each>
+</xsl:template>
+
+</xsl:stylesheet>
 ```
 >
 * Con lista
 >
 ```
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+<xsl:template match="/">
+  <ul>
+    <xsl:for-each select="/ies/ciclos/ciclo">
+      <li><xsl:value-of select="nombre" /></li>
+    </xsl:for-each>
+  </ul>
+</xsl:template>
+
+</xsl:stylesheet>
 ```
 >
 * Con tabla
 >
 ```
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+<xsl:template match="/">
+  <table border="1">
+    <tr>
+      <th>Ciclo</th>
+      <th>Grado</th>
+    </tr>
+    <xsl:for-each select="/ies/ciclos/ciclo">
+      <tr>
+        <td><strong><xsl:value-of select="nombre" /></strong></td>
+        <td><xsl:value-of select="grado" /></td>
+      </tr>
+    </xsl:for-each>
+  </table>
+</xsl:template>
+
+</xsl:stylesheet>
 ```
 >
