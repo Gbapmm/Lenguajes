@@ -42,16 +42,16 @@
             <tr>
               <xsl:choose>
                 <xsl:when test="$years = 3 or $years = 4">
-                  <xsl:attribute name="bgcolor">#98FB98</xsl:attribute> <!-- Pale Green -->
+                  <xsl:attribute name="bgcolor">#98FB98</xsl:attribute>
                 </xsl:when>
                 <xsl:when test="$years = 7 or $years = 8">
-                  <xsl:attribute name="bgcolor">#FF6347</xsl:attribute> <!-- Tomato -->
+                  <xsl:attribute name="bgcolor">#FF6347</xsl:attribute>
                 </xsl:when>
                 <xsl:when test="$years = 5 or $years = 6">
-                  <xsl:attribute name="bgcolor">#FFFF00</xsl:attribute> <!-- Yellow -->
+                  <xsl:attribute name="bgcolor">#FFFF00</xsl:attribute> 
                 </xsl:when>
                 <xsl:otherwise>
-                  <xsl:attribute name="bgcolor">#FFFFFF</xsl:attribute> <!-- Default white -->
+                  <xsl:attribute name="bgcolor">#FFFFFF</xsl:attribute>
                 </xsl:otherwise>
               </xsl:choose>
               <td><xsl:value-of select="id"/></td>
