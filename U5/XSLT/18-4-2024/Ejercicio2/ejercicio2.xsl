@@ -5,6 +5,7 @@
       <body>
         <h1>Lista de Productos Disponibles</h1>
         <xsl:for-each select="producto">
+          <xsl:sort select="precio" data-type="number" order="ascending"/>
           <h1>
             <xsl:value-of select="nombre"/>
           </h1>
